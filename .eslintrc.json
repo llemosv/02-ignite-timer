@@ -1,0 +1,51 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "import"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/alt-text": [
+      "warn",
+      {
+        "elements": ["img"],
+        "img": ["Image"]
+      }
+    ],
+    "jsx-a11y/aria-props": "warn",
+    "jsx-a11y/aria-proptypes": "warn",
+    "jsx-a11y/aria-unsupported-elements": "warn",
+    "jsx-a11y/role-has-required-aria-props": "warn",
+    "jsx-a11y/role-supports-aria-props": "warn",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}
