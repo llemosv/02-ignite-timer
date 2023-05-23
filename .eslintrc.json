@@ -3,7 +3,12 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks", "prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -12,26 +17,55 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "import"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "import"
+  ],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "jsx-a11y/alt-text": [
-      "warn",
+    "react/jsx-filename-extension": [
+      1,
       {
-        "elements": ["img"],
-        "img": ["Image"]
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
       }
     ],
-    "jsx-a11y/aria-props": "warn",
-    "jsx-a11y/aria-proptypes": "warn",
-    "jsx-a11y/aria-unsupported-elements": "warn",
-    "jsx-a11y/role-has-required-aria-props": "warn",
-    "jsx-a11y/role-supports-aria-props": "warn",
+    "no-use-before-define": [
+      "error",
+      {
+        "variables": false
+      }
+    ],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "array-callback-return": "off",
+    "react/jsx-no-bind": "off",
+    "no-implied-eval": "off",
+    "consistent-return": "off",
+    "no-undef": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/require-default-props": "off",
+    "no-nested-ternary": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/jsx-no-useless-fragment": "off",
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
         "pathGroups": [
           {
             "pattern": "react",
@@ -39,7 +73,9 @@
             "position": "before"
           }
         ],
-        "pathGroupsExcludedImportTypes": ["react"],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
